@@ -1,4 +1,7 @@
-﻿V3.2.3
+﻿V3.2.4
+1. Optimize SDK demo, add buffersize check when get raw data
+
+V3.2.3
 1. If the alias is not setted, set sn as alias
 2. Add tmiestamp in PsFrame
 3. Modify the param in api "Ps2_SetHotPlugStatusCallback"
