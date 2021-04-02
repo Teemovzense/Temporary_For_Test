@@ -246,9 +246,16 @@ typedef struct
 
 /**
 * @brief hotplug status callback function
-* uri    return the uri of the Device, See ::PsDeviceInfo
+* pInfo  return the info of the Device, See ::PsDeviceInfo
 * state  0:device added , 1:device removed
 */
 typedef void(*PtrHotPlugStatusCallback)(const PsDeviceInfo* pInfo, int state);
 
+/**
+* @brief hotplug status callback function for c plus plus
+* pInfo  return the info of the Device, See ::PsDeviceInfo
+* state  0:device added , 1:device removed
+* contex pointer to the object of C++ class
+*/
+typedef void(*PtrHotPlugStatusCallback_)(const PsDeviceInfo* pInfo, int state, void* contex);
 #endif /* VZENSE_TYPES_710_H */

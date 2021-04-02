@@ -564,7 +564,13 @@ VZENSE_C_API_EXPORT PsReturnStatus Ps2_GetMapperEnabledRGBToDepth(PsDeviceHandle
 * @return 		::PsRetOK		if the function succeeded, or one of the error values defined by ::PsReturnStatus.
 */
 VZENSE_C_API_EXPORT PsReturnStatus Ps2_SetHotPlugStatusCallback(PtrHotPlugStatusCallback pCallback);
-
+/**
+* @brief 		Sets hotplug status callback function for c plus plus
+* @param[in]	pCallback		Pointer to the callback function. See ::PtrHotPlugStatusCallback
+* @param[in]	contex		    Pointer to the object of C++ class
+* @return 		::PsRetOK		if the function succeeded, or one of the error values defined by ::PsReturnStatus.
+*/
+VZENSE_C_API_EXPORT PsReturnStatus Ps2_SetHotPlugStatusCallback_(PtrHotPlugStatusCallback_ pCallback, void* contex);
 /**
 * @brief 		Returns the pulse count from the device specified by <code>device</code>.
 * @param[in] 	device			The handle of the device on which to set the pulse count.
@@ -678,4 +684,12 @@ VZENSE_C_API_EXPORT PsReturnStatus Ps2_OpenDeviceByAlias(const char* alias, PsDe
 * @return 		::PsRetOK		if the function succeeded, or one of the error values defined by ::PsReturnStatus.
 */
 VZENSE_C_API_EXPORT PsReturnStatus Ps2_SetWaitTimeOfReadNextFrame(PsDeviceHandle device, uint32_t sessionIndex, uint16_t time);
+
+/**
+* @brief 		Gets the version of SDK.
+* @param[in] 	version 		Pointer to a variable in which to store the returned version value.
+* @param[in] 	length 			The maximum length is 63 bytes.
+* @return 		::PsRetOK		if the function succeeded, or one of the error values defined by ::PsReturnStatus.
+*/
+VZENSE_C_API_EXPORT PsReturnStatus Ps2_GetSDKVersion(char* version, int length);
 #endif /* VZENSE_API_710_H */
