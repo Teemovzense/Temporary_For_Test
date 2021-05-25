@@ -1,7 +1,5 @@
-﻿V3.2.9
-1. Add api Ps2_GetSDKVersion(char* version, int length)
-2. Support Depth_60 in SDK code ,for DCAM710
-3. Optimize hotPlug code
+﻿V3.2.10
+1. Fix error when run multiple applications
 
 V3.2.8
 1. Modify frameIndex(in PsFrame) counting logic
