@@ -1,4 +1,9 @@
-﻿V3.2.10
+﻿V3.2.11
+1. Optimize SDK code with multiple cameras, 
+   get the camera info(PsDeviceInfo) firstly, 
+   and then open the camera with the status(PsConnectStatus) is Connected
+
+V3.2.10
 1. Fix error when run multiple applications
 
 V3.2.8
